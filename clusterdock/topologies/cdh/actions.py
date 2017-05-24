@@ -103,6 +103,7 @@ def start(args):
     except:
         pass
 
+    logger.info('Manoj Waiting for Cloudera Manager server to come online...')
     logger.info('Waiting for Cloudera Manager server to come online...')
     cm_server_startup_time = wait_for_port_open(primary_node.ip_address,
                                                 CM_SERVER_PORT, timeout_sec=180)
